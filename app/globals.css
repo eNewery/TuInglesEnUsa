@@ -1,0 +1,989 @@
+/* Reset CSS */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 100;
+  font-family: "Oswald";
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+/* Reset CSS */
+
+/* Keyframes */
+
+@keyframes landingAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes imageKey {
+  0% {
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+  }
+}
+@keyframes heightToAuto {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 800px;
+  }
+}
+.heightToAuto {
+  height: 0;
+  animation: heightToAuto 1s both;
+}
+.imageKey {
+  animation: imageKey 5s both infinite;
+}
+/* Keyframes */
+
+/* General Classes */
+.textGothic {
+  font-family: "Dela Gothic One";
+}
+.textUnderline {
+  text-decoration: underline;
+}
+.textNoUnderline {
+  text-decoration-line: line-through;
+}
+.textBold {
+  font-weight: bold;
+}
+.textMediumBold {
+  font-weight: 500;
+}
+.textLittleBold {
+  font-weight: 300;
+}
+.boxMediumShadow {
+  border-radius: 0.2em;
+  animation: boxShadow 1s both;
+  box-shadow: inset 0 -10px 0 0 black;
+  padding: 0 0.2em 0 0.2em;
+  animation-delay: 1s;
+}
+@keyframes boxShadow {
+  0% {
+  }
+  100% {
+    box-shadow: inset 0 -150px 0 0 black;
+  }
+}
+.textHighlight {
+  font-size: 86px;
+}
+.textMediumHighlight {
+  font-size: 56px;
+}
+.textSmall {
+  font-size: 36px;
+}
+.textColor {
+  color: #ffcd28;
+}
+.textColor2 {
+  color: #ffcd28;
+}
+.textColor3 {
+  color: black;
+}
+.textCenter {
+  text-align: center;
+}
+.textStart {
+  text-align: start;
+  width: 100%;
+}
+.textCursive {
+  font-family: "Lobster", cursive;
+  font-weight: 100;
+}
+.flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flexCenterRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexWrap {
+  flex-wrap: wrap;
+}
+.w100 {
+  width: 100%;
+}
+.textCaveat{
+  font-family: "Caveat";
+}
+.m1 {
+  margin-top: 2em;
+}
+.itemRotate {
+  transform: rotateY(90deg);
+}
+.pointer {
+  cursor: pointer;
+}
+/* General Classes */
+
+/* Container */
+html {
+  z-index: -10;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #e6e7e8;
+  z-index: -10;
+}
+
+/* Button */
+
+.landingButtonContainer {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 500px;
+}
+.landingButtonContainer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 500px;
+  background-color: black;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0.3em;
+}
+.landingButtonContainer a:hover {
+  box-shadow: inset 0 -70px 0 0 #000000;
+  transition: 0.3s;
+}
+.landingButtonContainer a:active {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.arrowItem1 {
+  position: absolute;
+  left: -60%;
+  bottom: -7.5em;
+  transform: rotateY(180deg);
+  width: 256px;
+}
+
+/* Button */
+
+/* Header */
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  background-color: #ffcd28;
+}
+.headerContainer img {
+  width: 128px;
+  position: relative;
+  top: 3em;
+  z-index: 10;
+}
+
+/* Header */
+
+/* Container */
+
+/* Landing Container */
+
+.landingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 90vh;
+}
+
+/* Landing Container */
+
+/* Section 1 */
+
+.sectionContainer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f9db00;
+  
+  padding: 3em;
+}
+.sectionContainer1::before {
+  background-image: url("../public/images/backgroundSection1.jpg"); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la URL de tu imagen de fondo */
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 120vh;
+  filter: blur(
+    0em
+  ); /* Ajusta el valor del desenfoque según tus preferencias */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; /* Coloca el pseudo-elemento detrás del contenido del div */
+}
+.sectionContent1 {
+  position: relative;
+  right: 5em;
+}
+.sectionButtonContainer1 {
+  position: relative;
+  z-index: 10;
+  height: 100px;
+}
+.sectionButton1 {
+  background-color: rgb(255, 123, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  width: 50%;
+  height: 100px;
+  border-radius: 0.4em;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-top: 0.1em;
+  position: absolute;
+  left: 17%;
+  top: 0;
+}
+.sectionButton1:hover {
+  transition: 0.3s;
+  box-shadow: inset 0 -60px 1em 0 black;
+  color: rgb(255, 123, 0);
+}
+.sectionImage1 img {
+  border-radius: 50%;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 1;
+  box-shadow: -2em 2em 0.1em 0 #000000;
+}
+.landingButtonContainer1 {
+}
+.arrowItemSection1 {
+  position: absolute;
+  bottom: 0;
+  top: -3em;
+  width: 256px;
+  height: 256px;
+  left: -2em;
+  transform: rotateY(180deg);
+}
+/* Section 1 */
+
+/* Section 2 */
+
+.sectionContainer2 {
+  min-height: 100vh;
+  position: relative;
+  width: 100vw;
+  background-color: #f9db00;
+}
+
+/* Section 2 */
+
+/* Section 3 */
+
+.sectionContainer3 {
+  min-height: 90vh;
+  z-index: 10;
+}
+.sectionContent3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+video {
+  position: relative;
+  background: url(../public/images/poster.png);
+}
+.sectionContent3 img {
+  align-self: end;
+}
+.sectionContentBox3 {
+  box-shadow: 0 0 3px 3px #ffcd28;
+  padding: 1em 1em 0 1em;
+  transition: 0.3s;
+}
+.sectionContentBox3:hover p {
+  color: #ffcd28;
+  transition: 0s;
+}
+.sectionContentBox3:hover {
+  background-color: black;
+  color: #ffcd28;
+  transition: 0.3s;
+}
+/* Section 3 */
+
+/* Section 4 */
+.sectionContainer4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1em;
+  min-height: 100vh;
+  z-index: 1;
+  position: relative;
+  background-color: #f9db00;
+}
+.sectionContainer4Post {
+  margin-top: 0 !important;
+}
+.sectionContainer4Post::before {
+  content: "";
+  background-image: url("../public/images/backgroundSection4Post.jpeg") !important; /* Reemplaza 'ruta-de-tu-imagen.jpg' con la URL de tu imagen de fondo */
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1em); /* Ajusta el valor del desenfoque según tus preferencias */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; /* Coloca el pseudo-elemento detrás del contenido del div */
+  width: 100vw;
+}
+.sectionContainer4::before {
+  content: "";
+  background-image: url("../public/images/backgroundSection4.jpeg"); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la URL de tu imagen de fondo */
+  background-repeat: no-repeat;
+  filter: blur(1em); /* Ajusta el valor del desenfoque según tus preferencias */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; /* Coloca el pseudo-elemento detrás del contenido del div */
+  width: 100vw;
+}
+.sectionContent4 {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  opacity: 1;
+  background-color: rgba(131, 131, 131, 0.1);
+  box-shadow: 0 0 0.3em 1px #f9db00;
+  border-radius: 1em;
+  padding: 0.5em;
+  transition: 1s;
+  z-index: 10;
+}
+.sectionContent4:hover {
+  background-color: rgba(131, 131, 131, 0.5);
+  transition: 1s;
+}
+.sectionList4 {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: relative;
+}
+.sectionDisclaimer4 {
+  position: absolute;
+  bottom: -2.5em;
+  font-size: 14px;
+  left:1em;
+z-index: 10;
+}
+.sectionContent4 img {
+  align-self: flex-end;
+  position: relative;
+  top: 0.5em;
+}
+.sectionList4 {
+  text-align: start;
+}
+
+/* Section 4 */
+
+/* Section 5 */
+
+.sectionContainer5 {
+  min-height: 100vh;
+  background-color: #f9db00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionContent5 {
+  width: 50%;
+  gap: 4em;
+
+  margin-bottom: 1em;
+}
+.sectionContent5 img {
+  width: 50%;
+}
+
+/* Section 5 */
+
+/* Section 6 */
+
+.sectionContainer6 {
+  min-height: 100vh;
+  margin-top: 2em;
+}
+
+.sectionList6 {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.sectionList6 li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  width: 500px;
+  text-align: start !important;
+}
+.sectionArrows {
+  position: relative;
+}
+.sectionArrows img:first-child {
+  position: absolute;
+  left: -75%;
+  transform: rotateZ(215deg);
+  bottom: -6em;
+  height: 300px;
+}
+.sectionArrows img:last-child {
+  position: absolute;
+  transform: rotateZ(-215deg) rotateY(180deg);
+  bottom: -6em;
+  height: 300px;
+  right: -75%;
+}
+.arrowLeft {
+  position: static !important;
+  transform: rotateZ(0) rotateY(0) !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+/* Section 6 */
+
+/* Section 7 */
+
+.sectionContainer7 {
+  min-height: 100vh;
+  position: relative !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f9db00;
+  margin-top: 1em;
+  padding: 1em;
+}
+.sectionContainer7::before {
+  content: "";
+  background-image: url("../public/images/backgroundSection7.jpg"); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la URL de tu imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(
+    0.5em
+  ); /* Ajusta el valor del desenfoque según tus preferencias */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Coloca el pseudo-elemento detrás del contenido del div */
+}
+.sectionContent7 {
+  position: relative;
+  z-index: 10;
+}
+.sectionContent7 img {
+  width: 500px;
+}
+.rrss {
+  padding: 0 1em 0 1em;
+  border-radius: 1em;
+}
+.rrss img {
+  width: 64px;
+}
+/* Section 7 */
+
+/* Form */
+.formContainer {
+  min-height: 89.4vh;
+  background: url(../public/images/backForm.jpeg);
+  background-size: cover;
+}
+.formSection {
+  width: 550px !important;
+  height: 550px !important;
+  background-color: #f2f2f2;
+}
+.formSection h1 {
+  color: black;
+  font-family: "Montserrat";
+  margin-top: 1em;
+}
+.formSection1 {
+  justify-content: start !important;
+  align-items: center;
+  width: 300px !important;
+}
+.formSection1 img {
+  width: 32px;
+}
+.formRRSS {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  margin: 1em;
+  align-items: start;
+  width: 100%;
+  font-family: "Montserrat";
+  gap: 1em;
+}
+
+.rrssItem {
+  gap: 1em;
+  justify-content: stretch;
+  color: black;
+}
+.backFormContainer {
+  width: 850px;
+  height: 550px;
+}
+.backForm {
+  width: 850px;
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+}
+.formSection3 {
+  background-color: white;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputGroupContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  gap: 1em;
+}
+.inputGroup {
+  align-items: center;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.lastInput {
+  margin-bottom: 1em;
+}
+.formSection3 label {
+  color: black;
+  text-align: start;
+  align-self: flex-start;
+  font-size: 24px;
+}
+.inputGroup input {
+  width: 500px;
+  background-color: #f2f2f2;
+  height: 50px;
+  border: none;
+  color: gray;
+  padding: 1em;
+}
+.formSection3 {
+  justify-content: space-between;
+  padding: 1em;
+}
+.formSection3 button {
+  width: 500px;
+  height: 50px;
+  background-color: #ee701c;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* Form */
+
+/* Media 1800 */
+@media (max-width: 1800px) {
+  /* General Classes */
+
+  .textHighlight {
+    font-size: 72px;
+  }
+  .textMediumHighlight {
+    font-size: 56px;
+  }
+  .textSmall {
+    font-size: 34px;
+  }
+  .boxMediumShadow {
+    box-shadow: none;
+  }
+  /* General Classes */
+  /* Arrow */
+
+  .arrowItem1 {
+    left: -55%;
+    bottom: -7.5em;
+    width: 256px;
+  }
+  .arrowItem2 {
+    left: -55%;
+    bottom: 2.5em;
+    width: 256px;
+  }
+  .sectionArrows img:first-child {
+    position: absolute;
+    left: -35%;
+    transform: rotateZ(215deg);
+    bottom: -4em;
+    width: 200px;
+    height: 200px;
+  }
+  .sectionArrows img:last-child {
+    position: absolute;
+    transform: rotateZ(-215deg) rotateY(180deg);
+    bottom: -4em;
+    width: 200px;
+    height: 200px;
+    right: -35%;
+  }
+  /* Arrow */
+
+  /* Section 1 */
+
+  .sectionImage1 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .sectionImage1 img {
+    width: 400px;
+    height: 400px;
+    box-shadow: -0.5em 1em 0.1em 0 #ffcd28;
+  }
+  .sectionContent1 {
+    right: 0em;
+  }
+  .sectionContent1 h2 {
+    width: 100%;
+  }
+  .sectionButtonContainer1 {
+  }
+  .sectionButton1 {
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .arrowItemSection1{
+    left: -15em;
+  }
+  /* Section 1 */
+
+  /* Section 4 */
+
+  .sectionContent4 {
+    justify-content: center;
+    width: 70%;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .sectionContent4:hover {
+    background-color: transparent;
+  }
+  .sectionList4 {
+    padding: 1em;
+    box-shadow: 0 0.3em 0.3em 1px #ffcd28;
+    transition: 1s;
+  }
+  .sectionList4:hover {
+    background-color: #000000;
+    transition: 1s;
+  }
+  .sectionList4:hover .sectionList4 li {
+    color: #ffcd28;
+    transition: 1s;
+  }
+  /* Section 4 */
+}
+/* Media 1800 */
+
+/* Media 1800 */
+@media (max-width: 1500px) {
+  /* General Classes */
+
+  .textHighlight {
+    font-size: 52px;
+  }
+  .textMediumHighlight {
+    font-size: 46px;
+  }
+  .textSmall {
+    font-size: 24px;
+  }
+  .boxMediumShadow {
+    box-shadow: none;
+  }
+  /* General Classes */
+
+  .arrowItemSection1 {
+    left: -8em;
+    top: 0em;
+    width: 128px;
+    height: 128px;
+  }
+}
+
+/* Media 1500 */
+
+/* Media 1000 */
+@media (max-width: 1000px) {
+  /* General Classes */
+
+  .textHighlight {
+    font-size: 36px;
+  }
+  .textMediumHighlight {
+    font-size: 24px;
+  }
+  .textSmall {
+    font-size: 16px;
+  }
+
+  /* General Classes */
+  /* Arrow */
+
+  .arrowItem1 {
+    left: -35%;
+    bottom: -4em;
+    width: 168px;
+  }
+  .arrowItem2 {
+    left: -25%;
+    bottom: -2.5em;
+    width: 168px;
+  }
+  /* Arrow */
+
+  /* Section 1 */
+  .sectionImage1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .sectionImage1 img {
+    width: 300px;
+    height: 300px;
+    box-shadow: -0.5em 1em 0.1em 0 #ffcd28;
+  }
+  .sectionContent1 {
+    right: 0em;
+  }
+  /* Section 1 */
+  /* Section 3 */
+
+  .sectionContentBox3 {
+    flex-wrap: wrap;
+    box-shadow: none;
+  }
+
+  /* Section 3 */
+
+  /* Section 4 */
+
+  .sectionContent4 {
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 100vh;
+    align-items: center;
+    width: 100%;
+  }
+  .sectionDisclaimer4{
+    bottom: -4em;
+  }
+  /* Section 4 */
+}
+/* Media 1000 */
+
+/* Media 760 */
+
+@media (max-width: 768px) {
+  /* Arrow */
+
+  .arrowItem1 {
+    left: -15%;
+    bottom: 0.4em;
+    width: 48px;
+    height: 48px;
+  }
+  .arrowItem2 {
+    left: -25%;
+    top: 2em;
+    width: 64px;
+  }
+  /* Arrow */
+
+  /* Section 1 */
+  .sectionContainer1 {
+    flex-wrap: wrap;
+    gap: 1em;
+    background-color: transparent;
+  }
+  .sectionContent1 h2{
+    font-size: 32px;
+  }
+  .arrowSectionItem{
+    display: none;
+  }
+  .arrowItemSection1 {
+    display: none;
+  }
+  .sectionContent1{
+    width: 400px;
+  }
+  .sectionImage1{
+    position: relative;
+    left:1em;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1em;
+  }
+video{
+  width: 300px;
+  height: 300px;
+}
+  .sectionImage1 img {
+    width: 200px;
+    height: 200px;
+    box-shadow: -0.5em 1em 0.1em 0 #ffcd28;
+  }
+  .sectionButtonContainer1 {
+    height: 80px;
+  }
+  .sectionButton1 {
+    width: 100%;
+    left: 0;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landingButtonContainer{
+    width: 300px;
+  }
+  /* Section 1 */
+    /* Section 3 */
+
+    .sectionContentBox3 img{
+width: 350px;
+    }
+    .sectionContent3 h1{
+      text-align: center;
+    }
+
+    /* Section 3 */
+
+    /* Section 4 */
+.sectionContent4{
+  align-items: start;
+}
+.sectionList4{
+  box-shadow: none;
+}
+.sectionContent4 img{
+  width: 350px;
+}
+      /* Section 4 */
+
+      /* Section 6 */
+
+.sectionList6{
+  align-items: center;
+  width: auto;
+}
+.sectionList6 li{
+justify-content: space-between;
+gap: 1em;
+width: 250px;
+}
+.sectionContent6 h2{
+  text-align: center;
+}
+
+      /* Section 6 */
+
+
+      /* Section 7 */
+
+      .sectionContent7 img{
+        width: 350px;
+      }
+      .sectionContent7 h2{
+        text-align: center;
+      }
+.sectionContent7 .rrss img{
+  width: 64px;
+
+}
+      /* Section 7 */
+
+}
+
+/* Media 760 */

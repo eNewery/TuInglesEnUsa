@@ -1,0 +1,58 @@
+
+/* Estilo base del acordeón */
+.accordion {
+    width: 50%;
+    border-radius: 0.3em;
+  }
+  
+  /* Estilo del botón de activación */
+  .accordion-button:hover{
+    background-color: #d6ad24;
+  }
+  .accordion-button {
+    border: none;
+
+    background-color: none;
+    box-shadow: 0 2px 0.2em 1px black;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+    padding: 1em;
+font-weight: 400;
+
+    transition: background-color 0.3s ease; /* Animación de color de fondo */
+  }
+  
+  /* Estilo del contenido oculto */
+  .accordion-content {
+    max-height: 0px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    overflow: hidden;
+    color: black;
+    transition: max-height 1s ease; /* Animación de altura máxima */
+  }
+  
+.accordion span{
+  color: black;
+}
+  /* Estilo del contenido visible */
+  .accordion-content.open {
+    max-height: 300px; /* Altura máxima cuando está abierto */
+  }
+@media (max-width:1000px) {
+  .accordion{
+    width: 100%;
+  }
+}
+@media (max-width:768px) {
+  .accordion{
+    width: 350px;
+  }
+}
