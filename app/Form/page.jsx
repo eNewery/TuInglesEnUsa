@@ -1,8 +1,37 @@
-import React from "react";
-
+"use client"
+import { updateDoc, doc, arrayUnion, setDoc } from "firebase/firestore";
+import React, { useState } from "react";
+import { db } from "../components/firebase";
+import { useRouter } from "next/navigation";
 const Form = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
+  const [zip, setZip] = useState("")
+const router = useRouter()
+
+  const handleSubmit = async(e) => {
+    e.preventDefault()
+    const date = Date.now()
+    const newPost = {
+      Nombre: name,
+      Email: email,
+      Telefono:phone,
+      ZIP:zip
+  
+    };
+    try{
+      const docRef = doc(db, "suscripciones", date.toString())
+      await setDoc(docRef, newPost)
+      console.log("Documento seteado.")
+      router.push("/")
+    }
+    catch(e){
+console.log("Error:", e)
+    }
+  }
   return (
-    <div className="formContainer flexCenterRow">
+    <div className="formContainer flexWrap flexCenterRow">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
@@ -32,21 +61,25 @@ const Form = () => {
       </section>
       <section className="formSection formSection3">
     <h1 className="textMediumBold">Contáctanos</h1>
-    <div className="inputGroupContainer">
+    <form onSubmit={(e) => handleSubmit(e)} className="inputGroupContainer">
     <div className="inputGroup">
         <label htmlFor="">Nombre Completo</label>
-        <input placeholder="Ingresa tu nombre" type="text" />
+        <input required onChange={(e) => setName(e.target.value)} placeholder="Ingresa tu Nombre" type="text" />
     </div>
     <div className="inputGroup">
         <label htmlFor="">Email</label>
-        <input placeholder="Ingresa tu E-Mail" type="text" />
+        <input required onChange={(e) => setEmail(e.target.value)} placeholder="Ingresa tu E-Mail" type="text" />
+    </div>
+    <div className="inputGroup">
+        <label htmlFor="">Teléfono</label>
+        <input required onChange={(e) => setPhone(e.target.value)} placeholder="Ingresa tu Teléfono" type="text" />
     </div>
     <div className="inputGroup lastInput">
         <label htmlFor="">ZIP Code</label>
-        <input placeholder="Ingresa tu ZIP Code" type="text" />
+        <input required onChange={(e) => setZip(e.target.value)} placeholder="Ingresa tu ZIP Code" type="text" />
     </div>
-    </div>
-    <button>Enviar</button>
+    <button type="submit">Enviar</button>
+    </form>
       </section>
     </div>
   );

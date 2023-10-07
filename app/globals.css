@@ -176,7 +176,7 @@ html {
   align-items: center;
   height: 70px;
   width: 500px;
-  background-color: black;
+  background-color:rgb(230, 25, 25);
   border: none;
   font-size: 32px;
   cursor: pointer;
@@ -184,8 +184,9 @@ html {
   border-radius: 0.3em;
 }
 .landingButtonContainer a:hover {
-  box-shadow: inset 0 -70px 0 0 #000000;
+  box-shadow: inset 0 -30px 1em 0 #000000;
   transition: 0.3s;
+  color: white;
 }
 .landingButtonContainer a:active {
   transform: scale(1.1);
@@ -221,6 +222,141 @@ html {
 
 /* Header */
 
+
+/* Footer */
+
+.footerContainer{
+width: 100%;
+  height: 300px;
+  background: #292929;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  }
+  .footerLogo{
+  background: url(../public/images/logo2.png);
+  width: 128px;
+  height: 128px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+  .footerTerms{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  }
+  .footerPrivacyTermsContainer{
+      display: flex;
+      gap: 1em;
+  }
+  .footerPrivacyTerms{
+      cursor: pointer;
+  }
+  .footerPrivacyTerms:hover{
+      color: rgb(224, 224, 224);
+  }
+  .footerCopy{
+  
+  }
+  /* Footer */
+
+
+/* Admin Panel */
+
+.adminPanelContainer{
+  height: 90vh;
+  width: 100%;
+  background-color:#ffcd28;
+  overflow-y: hidden;
+}
+.adminPanel{
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 1em;
+  height: 80%;
+width: 80%;
+background-color: white;
+box-shadow: 0 0 1px 1px black;
+}
+.adminPanel h1{
+  font-weight: 800;
+  font-family: "Montserrat";
+  font-size: 32px;
+  width: 100%;
+  border-bottom: 3px solid black;
+}
+.adminPanelList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+.adminPanelListGroup{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+.adminPanelListGroup p{
+  width: 25%;
+}
+.buttonLogOut{
+  position: relative;
+  top: 1em;
+width: 300px;
+background-color: none;
+border-radius: 1em;
+border: 1px solid black;
+height: 30px;
+color: black;
+}
+.adminPanelLogin{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  background-color: #ffcd28;
+}
+.adminPanelLogin h1{
+font-family: "Montserrat";
+font-weight: 800;
+}
+.inputFormLogin{
+display: flex;
+flex-direction: column;
+width: 300px;
+height: 30px;
+outline: none;
+color: black;
+font-family: "Montserrat";
+font-weight: 500;
+}
+.buttonLogIn{
+  position: relative;
+  top: 1em;
+width: 300px;
+background-color: none;
+border-radius: 1em;
+border: none;
+height: 30px;
+color: black;
+}
+/* Admin Panel */
+
 /* Container */
 
 /* Landing Container */
@@ -246,7 +382,12 @@ html {
   
   padding: 3em;
 }
+@keyframes scalate {
+  0%{transform: scale(2);}
+  100%{}
+}
 .sectionContainer1::before {
+  animation: scalate 1s both;
   background-image: url("../public/images/backgroundSection1.jpg"); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la URL de tu imagen de fondo */
   content: "";
   background-size: cover;
@@ -273,7 +414,7 @@ html {
   height: 100px;
 }
 .sectionButton1 {
-  background-color: rgb(255, 123, 0);
+  background-color: rgb(255, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -292,8 +433,8 @@ html {
 }
 .sectionButton1:hover {
   transition: 0.3s;
-  box-shadow: inset 0 -60px 1em 0 black;
-  color: rgb(255, 123, 0);
+  box-shadow: inset 0 -30px 1em 0 black;
+  color: rgb(0, 0, 0);
 }
 .sectionImage1 img {
   border-radius: 50%;
@@ -418,7 +559,7 @@ video {
 }
 .sectionContent4:hover {
   background-color: rgba(131, 131, 131, 0.5);
-  transition: 1s;
+  transition: 0.3s;
 }
 .sectionList4 {
   display: flex;
@@ -426,6 +567,7 @@ video {
   align-items: start;
   position: relative;
 }
+
 .sectionDisclaimer4 {
   position: absolute;
   bottom: -2.5em;
@@ -751,15 +893,18 @@ z-index: 10;
   .sectionList4 {
     padding: 1em;
     box-shadow: 0 0.3em 0.3em 1px #ffcd28;
-    transition: 1s;
+    transition: 0.3s;
   }
   .sectionList4:hover {
     background-color: #000000;
-    transition: 1s;
+    transition: 0.3s;
   }
   .sectionList4:hover .sectionList4 li {
     color: #ffcd28;
-    transition: 1s;
+    transition: 0.3s;
+  }
+  .sectionList4:hover li{
+    text-transform: uppercase;
   }
   /* Section 4 */
 }
@@ -789,6 +934,34 @@ z-index: 10;
     width: 128px;
     height: 128px;
   }
+
+  .formContainer{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .formSection{
+    width: 100% !important;
+  }
+ .formSection1{
+  width: 100% !important;
+  height: 300px !important;
+  padding: 1em;
+  justify-content: center;
+  align-items: start;
+ }
+ .backForm{
+  width: 100% !important;
+ }
+ .formSection1 h1{
+  font-size: 46px;
+ }
+ .formRRSS{
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  height: 300px;
+ }
 }
 
 /* Media 1500 */
@@ -942,13 +1115,13 @@ width: 350px;
 
     /* Section 4 */
 .sectionContent4{
-  align-items: start;
+  align-items: center;
 }
 .sectionList4{
   box-shadow: none;
 }
 .sectionContent4 img{
-  width: 350px;
+align-self: center !important;
 }
       /* Section 4 */
 
