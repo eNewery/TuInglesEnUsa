@@ -14,7 +14,7 @@ const Section5 = () => {
         <h2 className="textMediumBold textMediumHighlight">Curso Completo <span className="textMediumBold textColor3">Garantizado</span></h2>
         <h2 className="textCenter flexCenterColumn textMediumBold textMediumHighlight">Cuando usted siendo hispano, pide beca, <span className="textCenter textBold textHighlight textColor3">LE OFRECEMOS SUBSIDIOS DEL 50% EN EL CURSO</span>gracias al fondo de ayudas educativas a hispanos en USA.</h2>
         <div className="landingButtonContainer">
-        <Link href="/Form" className='textCenter textBold'>APLICA AHORA</Link>
+        <Link href="/Form" className='textCenter textBold'>INFORMATE AHORA</Link>
         </div>
     </div>
       </div>

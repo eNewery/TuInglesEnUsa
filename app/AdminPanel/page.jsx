@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { db } from "../components/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -8,13 +8,14 @@ const AdminPanel = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
+  const [error, setError] = useState("")
     const handleLogin = () => {
       // Verificar las credenciales (hardcodeadas en este ejemplo)
       if (username === 'Admin' && password === 'anglohispana') {
         setIsLoggedIn(true);
       } else {
         setIsLoggedIn(false);
+        setError("Contraseña Erronea")
       }
     };
   
@@ -40,9 +41,12 @@ const AdminPanel = () => {
           console.error('Error al obtener usuarios:', error);
         }
       }
+      useEffect(() => {
+        
+         obtenerUsuarios()   
+        
+      }, [])
       
-      // Llama a la función para obtener los usuarios
-      obtenerUsuarios();
   return (
     isLoggedIn ? (
   <div className="adminPanelContainer flexCenterColumn">
@@ -55,7 +59,7 @@ const AdminPanel = () => {
     rel="stylesheet"
   />
   <div className="adminPanel">
-    <h1 className="textHighlight textColor3">Suscripciones recientes:</h1>
+    <h1 className="textHighlight textColor2">Suscripciones recientes:</h1>
     <ul className="adminPanelList">
       <li className="adminPanelListGroup">
         <p className="textColor3 textCenter textMediumBold">Nombre y apellido</p>
@@ -84,7 +88,7 @@ const AdminPanel = () => {
     href="https://fonts.googleapis.com/css2?family=Arizonia&family=Bebas+Neue&family=Caveat&family=Cedarville+Cursive&family=Jost&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
-        <h1>Iniciar Sesión</h1>
+        <h1 className="textMediumHighlight">Iniciar Sesión</h1>
         <input
         className="inputFormLogin"
           type="text"
@@ -100,6 +104,7 @@ const AdminPanel = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button className="buttonLogIn" onClick={handleLogin}>Iniciar sesión</button>
+  <p className="textColor4 textSmall textMediumBold">{error}</p>
       </div>
     )
 );
