@@ -811,8 +811,8 @@ z-index: 10;
 }
 /* Form */
 
-/* Media 1800 */
-@media (max-width: 1800px) {
+/* Media 1950 */
+@media (max-width: 1950px) {
   /* General Classes */
 
   .textHighlight {
@@ -914,15 +914,13 @@ z-index: 10;
     color: #ffcd28;
     transition: 0.3s;
   }
-  .sectionList4:hover li{
-    text-transform: uppercase;
-  }
+
   /* Section 4 */
 }
-/* Media 1800 */
+/* Media 1950 */
 
-/* Media 1800 */
-@media (max-width: 1500px) {
+/* Media 1600 */
+@media (max-width: 1600px) {
   /* General Classes */
 
   .textHighlight {
@@ -975,7 +973,7 @@ z-index: 10;
  }
 }
 
-/* Media 1500 */
+/* Media 1600 */
 
 /* Media 1000 */
 @media (max-width: 1000px) {
